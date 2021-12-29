@@ -1,0 +1,81 @@
+.posts-grid {
+  columns: 4 240px;
+  column-gap: 1em;
+}
+
+.post-card {
+  display: inline-block;
+  background-color: white;
+  margin-bottom: 1em;
+  width: 100%;
+  box-shadow: .3px .5px 3px lightgray;
+}
+
+.post-card-header {
+  display: grid;
+  grid-template-areas:
+    "img img"
+    "avatar name"
+    "avatar timestamps";
+  grid-template-columns: min-content;
+}
+
+.post-card .post-author-avatar {
+  margin: 0.7rem;
+  margin-left: 1rem;
+  width: 35px;
+  height: 35px;
+}
+
+.post-card .post-img {
+  grid-area: img;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.post-card:nth-of-type(4n) .post-img {
+  height: 220px;
+}
+.post-card:nth-of-type(6n) .post-img {
+  height: 180px;
+}
+
+.post-card .post-title {
+  font-size: 1.4em;
+  margin: 0 1rem 0.4rem 1rem;
+}
+
+.post-card .post-description {
+  display: block;
+  white-space: normal;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.post-card-button {
+  text-decoration: none;
+  border: none;
+  color: steelblue;
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.post-card-button:hover {
+  color: rgb(50, 110, 155);
+}
+
+@media only screen and (min-width: 500px) {
+  .posts-grid {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+  .posts-grid {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

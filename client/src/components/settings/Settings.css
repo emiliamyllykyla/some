@@ -1,0 +1,52 @@
+.settings {
+  width: 100%;
+  background-color: white;
+  padding: 2em;
+  margin: 0 auto;
+}
+.settings h1 {
+  margin-bottom: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.edit-profile-img .form-group {
+  width: 100%;
+}
+
+.edit-profile-img label {
+  display: none;
+}
+
+.edit-profile-img #img {
+  border: 1px solid lightgray;
+  width: 100%;
+  padding: 5px;
+  margin-top: 1em;
+}
+
+.edit-profile-img button {
+  margin: 1em 0;
+  border: none;
+  font-size: 1em;
+  background-color: steelblue;
+  padding: 0.5em 0.8em;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-profile-img button:hover {
+  background-color: rgb(80, 145, 195);
+}
+
+.delete-user-button {
+  display: block;
+  margin: 1em 0;
+  border: none;
+  font-size: 1em;
+  background-color: indianred;
+  padding: 0.5em 0.8em;
+  color: white;
+  cursor: pointer;
+}

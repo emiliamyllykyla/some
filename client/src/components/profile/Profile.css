@@ -1,0 +1,106 @@
+.profile-auth {
+  display: grid;
+  grid-template-areas:
+    "info"
+    "makepost"
+    "posts";
+  gap: 1em;
+}
+
+.profile {
+  display: grid;
+  grid-template-areas:
+    "info"
+    "posts";
+  gap: 1em;
+}
+
+.profile-auth .make-post {
+  margin-bottom: 0;
+  grid-area: makepost;
+}
+
+.profile-info {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  width: 100%;
+  grid-area: info;
+  height: fit-content;
+  box-shadow: 0.3px 0.5px 3px lightgray;
+}
+
+.profile-info h1 {
+  margin-bottom: 0.5em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.profile-table {
+  margin-bottom: 1em;
+}
+
+.profile-table td {
+  padding: 0 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1em;
+}
+
+.profile-posts {
+  grid-area: posts;
+}
+
+.follow-button {
+  border: 1px solid steelblue;
+  font-size: 1em;
+  background-color: steelblue;
+  padding: 0.5em 0.8em;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.follow-button:hover {
+  border: 1px solid rgb(80, 145, 195);
+  background-color: rgb(80, 145, 195);
+}
+
+.follow-button-unfollow {
+  border: 1px solid steelblue;
+  font-size: 1em;
+  background-color: transparent;
+  padding: 0.5em 0.8em;
+  color: steelblue;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.follow-button-unfollow:hover {
+  color: white;
+  background-color: rgb(80, 145, 195);
+}
+
+@media only screen and (min-width: 900px) {
+  .profile-auth {
+    grid-template-areas:
+      "info makepost makepost"
+      ". posts posts";
+  }
+  .profile {
+    grid-template-areas: "info posts posts";
+  }
+  .profile-auth,
+  .profile {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 1em;
+  }
+}

@@ -1,0 +1,52 @@
+.post-form label {
+  display: none;
+}
+
+.post-form {
+  display: inline;
+}
+
+.post-form .form-group {
+  margin: 1rem;
+}
+
+.post-form #title {
+  border: 1px solid lightgray;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.9em;
+  font-weight: bold;
+  padding: 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.post-form #description {
+  border: 1px solid lightgray;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  resize: vertical;
+}
+
+.post-form #img {
+  border: 1px solid lightgray;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+}
+
+.save-button {
+  border: none;
+  font-size: 1em;
+  background-color: steelblue;
+  padding: 0.5em 0.8em;
+  color: white;
+  cursor: pointer;
+  margin: 0 0rem 1rem 1rem;
+}
+
+.save-button:hover {
+  background-color: rgb(80, 145, 195);
+}
