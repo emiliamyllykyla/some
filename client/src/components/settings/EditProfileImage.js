@@ -9,11 +9,10 @@ const EditProfileImage = () => {
     img: "",
   });
 
-  useEffect(() => {
-    getUserImage(auth.name).then((img) => {
-      setForm({ img });
-    });
-  }, []);
+  useEffect(
+    () => getUserImage(auth.name).then((img) => setForm({ img })),
+    [auth]
+  );
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

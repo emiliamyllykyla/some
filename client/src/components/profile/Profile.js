@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { getUserApi } from "../../api";
 import { fetchPostsByUser } from "../../functions/fetchPostsByUser";
 import ProfileInfo from "./ProfileInfo";
@@ -39,6 +39,7 @@ const Profile = () => {
       .catch((err) => console.log(err));
   };
 
+  const memoizedFetchUser = useCallback(() => fetchUser(name), [name]);
   useEffect(() => fetchUser(name), [name]);
   useEffect(() => user && getPosts(user), [user]);
 
@@ -52,7 +53,7 @@ const Profile = () => {
             auth && auth.name === user.name ? "profile-auth" : "profile"
           }
         >
-          <ProfileInfo user={user} onFollowChange={() => fetchUser(name)} />
+          <ProfileInfo user={user} onFollowChange={memoizedFetchUser} />
           {auth && auth.name === user.name && (
             <MakePost onSuccess={() => getPosts(user)} />
           )}

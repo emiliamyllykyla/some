@@ -1,7 +1,7 @@
 import { useAuth } from "../../contexts/AuthContext";
 
 const Logout = () => {
-  const { auth, logout } = useAuth();
+  const { logout } = useAuth();
 
   return <button onClick={logout}>Logout</button>;
 };

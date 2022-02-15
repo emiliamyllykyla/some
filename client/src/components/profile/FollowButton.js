@@ -28,9 +28,9 @@ const FollowButton = ({ user, onFollowChange }) => {
     if (auth.id !== user.id) {
       check();
     }
-  }, [auth]);
+  }, [auth, user]);
 
-  useEffect(() => onFollowChange(), [follows]);
+  useEffect(() => onFollowChange(), [follows, onFollowChange]);
 
   if (loading) return null;
   return auth.id !== user.id ? (
