@@ -2,7 +2,9 @@ const { SchemaFieldTypes } = require("redis");
 const client = require("./redis_connect.js");
 
 async function createUsersIndex() {
-  await client.ft.dropIndex("idx:users");
+  try {
+    await client.ft.dropIndex("idx:users");
+  } catch {}
   await client.ft.create(
     "idx:users",
     {
